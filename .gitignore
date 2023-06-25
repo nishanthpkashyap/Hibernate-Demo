@@ -1,4 +1,4 @@
 .classpath
 .project
 .settings/
-*.class
+target/classes/com/nishanth/Hibernate_Demo/*.class
