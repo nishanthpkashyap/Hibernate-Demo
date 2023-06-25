@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class _1_Alien 
+public class Alien_1 
 {
 	@Id
 	private int id;
