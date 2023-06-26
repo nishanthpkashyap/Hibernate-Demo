@@ -1,14 +1,20 @@
 package com.nishanth.Hibernate_Demo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
-@Entity
-public class Alien_1 
+@Entity(name="alien2")
+@Table(name="alien_2")
+public class Alien_2 
 {
 	@Id
 	private int id;
+	@Transient
 	private String name;
+	@Column(name="alien_colour")
 	private String colour;
 	
 	public String getName() {
@@ -29,9 +35,4 @@ public class Alien_1
 	public void setColour(String colour) {
 		this.colour = colour;
 	}
-	@Override
-	public String toString() {
-		return "Alien_1 [id=" + id + ", name=" + name + ", colour=" + colour + "]";
-	}
-	
 }

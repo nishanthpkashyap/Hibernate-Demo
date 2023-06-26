@@ -7,22 +7,22 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
-public class _1_App 
-{
-    public static void main( String[] args )
-    {
-        Alien_1 alien1 = new Alien_1();
-        alien1.setId(7);
-        alien1.setName("Apple");
-        alien1.setColour("Red");
+public class _2_Annotations {
+
+	public static void main(String[] args) {
+		Alien_2 alien2 = new Alien_2();
+        alien2.setId(1);
+        alien2.setName("Apple");
+        alien2.setColour("Red");
         
-        Configuration con = new Configuration().configure().addAnnotatedClass(Alien_1.class);
+        Configuration con = new Configuration().configure().addAnnotatedClass(Alien_2.class);
         ServiceRegistry reg = new ServiceRegistryBuilder().applySettings(con.getProperties()).buildServiceRegistry();
         SessionFactory sf = con.buildSessionFactory(reg);
         Session session = sf.openSession();
         Transaction tx = session.beginTransaction(); 
-        session.save(alien1);
+        session.save(alien2);
         tx.commit();
-        
-    }
+
+	}
+
 }
