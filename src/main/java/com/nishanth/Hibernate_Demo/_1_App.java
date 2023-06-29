@@ -11,12 +11,12 @@ public class _1_App
 {
     public static void main( String[] args )
     {
-        Alien_1 alien1 = new Alien_1();
-        alien1.setId(7);
-        alien1.setName("Apple");
-        alien1.setColour("Red");
+        Alien_8 alien1 = new Alien_8();
+        alien1.setId(4);
+        alien1.setName("Grapes");
+        alien1.setColour("Green");
         
-        Configuration con = new Configuration().configure().addAnnotatedClass(Alien_1.class);
+        Configuration con = new Configuration().configure().addAnnotatedClass(Alien_8.class);
         ServiceRegistry reg = new ServiceRegistryBuilder().applySettings(con.getProperties()).buildServiceRegistry();
         SessionFactory sf = con.buildSessionFactory(reg);
         Session session = sf.openSession();
