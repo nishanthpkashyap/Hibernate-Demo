@@ -12,9 +12,9 @@ public class _1_App
     public static void main( String[] args )
     {
         Alien_1 alien1 = new Alien_1();
-        alien1.setId(4);
-        alien1.setName("Grapes");
-        alien1.setColour("Green");
+        alien1.setId(8);
+        alien1.setName("Melon");
+        alien1.setColour("Peach-ish");
         
         Configuration con = new Configuration().configure().addAnnotatedClass(Alien_1.class);
         ServiceRegistry reg = new ServiceRegistryBuilder().applySettings(con.getProperties()).buildServiceRegistry();
